@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kitty Food</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,400;1,500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -25,7 +30,7 @@
                     <img src="menu.svg" alt="Open menu">
                 </a>
                 <ul>
-                    <li>
+                    <li class="hide-desktop">
                         <a href="#" class="menu-close">
                             <img src="close.svg" alt="Close menu">
                         </a>
@@ -63,6 +68,19 @@
             </div>
         </div>
     </div>
+    <script>
+        const menu = document.querySelector('nav ul');
+        const menuBtn = document.querySelector('.menu-open');
+        const closeBtn = document.querySelector('.menu-close');
+
+        menuBtn.addEventListener('click', () => {
+          menu.classList.add('open') 
+        });
+
+         closeBtn.addEventListener('click', () => {
+                menu.classList.remove('open')
+            });
+    </script>
 </body>
 
 </html>
